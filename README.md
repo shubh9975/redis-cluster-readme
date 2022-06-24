@@ -45,5 +45,8 @@ You can configure the following:
 |tls.certificatesSecret	|DEPRECATED. Use tls.existingSecret instead	|string|""|
 |tls.certFilename	|Certificate filename	|string|""|
 |tls.certKeyFilename	|Certificate key filename	|string|""|
-|tls.certCAFilename	|CA Certificate filename	|string|""|
+|tls.certCAFil|ename	|CA Certificate filename	|string|""|
 |tls.dhParamsFilename	|File containing DH params (in order to support DH based ciphers)	|string|""|
+|service.ports.redis	|Kubernetes Redis service port|integer|6379|
+|service.nodePorts.redis	|Node port for Redis	|string|""|
+|
