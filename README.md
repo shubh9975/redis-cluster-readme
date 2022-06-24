@@ -158,3 +158,7 @@ You can configure the following:
 ### Sysctl Image parameters
 |Parameter|Description|Type|Default|
 |---------|-----------|----|-------|
+|sysctlImagsysctlImage.repository	|sysctlImage Init container repository	|string|e.enabled	|Enable an init container to modify Kernel settings	|string|false|
+|sysctlImage.registry	|sysctlImage Init container registry	|string|docker.io|
+|sysctlImage.repository	|sysctlImage Init container repository	|string|bitnami/bitnami-shell|
+|sysctlImage.tag	|sysctlImage Init container tag	|string|10-debian-10-r431|
