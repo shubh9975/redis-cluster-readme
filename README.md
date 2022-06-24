@@ -18,3 +18,7 @@ You can configure the following:
 |networkPolicy.ingressNSMatchLabels|Allow connections from other namespacess. Just set label for namespace and set label for pods (optional).|string|{}|
 |networkPolicy.ingressNSPodMatchLabels|	For other namespaces match by pod labels and namespace labels|tring|{}|
 |serviceAccount.create|Specifies whether a ServiceAccount should be created|string|false|
+|serviceAccount.create|Specifies whether a ServiceAccount should be created|string|false|
+|serviceAccount.name|	The name of the ServiceAccount to create|string|""|
+|serviceAccount.annotations|Annotations for Cassandra Service Account|string|{}|
+|serviceAccount.automountServiceAccountToken|Automount API credentials for a service account.|string|false|
