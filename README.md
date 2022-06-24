@@ -65,4 +65,11 @@ You can configure the following:
 |persistence.size	|Size of data volume	|string|8Gi|
 |persistence.matchLabels	|Persistent Volume selectors	|string|{}|
 |persistence.matchExpressions	|matchExpressions Persistent Volume selectors	|string|{}|
-|
+|volumePermissions.enabled	|Enable init container that changes volume permissions in the registry (for cases where the default k8s runAsUser and fsUser values do not work)	|string|false|
+|volumePermissions.image.registry	|Init container volume-permissions image registry	|string|docker.io|
+|volumePermissions.image.repository	|Init container volume-permissions image repository	|string|bitnami/bitnami-shell|
+|volumePermissions.image.tag	|Init container volume-permissions image tag	|string|10-debian-10-r431|
+|volumePermissions.resources.limits	|The resources limits for the container	|string|{}|
+|volumePermissions.resources.requests	|The requested resources for the container	|string|{}|
+|podSecurityPolicy.create	|Whether to create a PodSecurityPolicy. WARNING: PodSecurityPolicy is deprecated in Kubernetes v1.21 or later, unavailable in v1.25 or later	|string|false|
+
