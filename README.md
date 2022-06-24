@@ -117,4 +117,22 @@ You can configure the following:
 |cluster.init	|Enable the initialization of the Redis® Cluster	|string|true|
 |cluster.nodes	|The number of master nodes should always be >= 3, otherwise cluster creation will fail	|integer|6|
 |cluster.replicas	|Number of replicas for every master in the cluster	|integer|1|
+|cluster.externalAccess.enabled	|Enable access to the Redis	|string|false|
+|cluster.update.addNodes	|Boolean to specify if you want to add nodes after the upgrade	|string|false|
+|cluster.update.currentNumberOfNodes	|Number of currently deployed Redis® nodes	|integer|6|
+|cluster.update.currentNumberOfReplicas	|Number of currently deployed Redis® replicas	|integer|1|
 
+
+### Metrics sidecar parameters
+|Parameter|Description|Type|Default|
+|---------|-----------|----|-------|
+|metrics.enabled	|Start a side-car prometheus exporter	|string|false|
+|metrics.image.registry	|Redis® exporter image registry	|string|docker.io|
+|metrics.image.repository	|Redis® exporter image name	|string|bitnami/redis-exporter|
+|metrics.image.tag	|Redis® exporter image tag	|string|1.37.0-debian-10-r62|
+|metrics.image.pullPolicy	|Redis® exporter image pull policy	|string|IfNotPresent|
+|metrics.resources	|Metrics exporter resource requests and limits	|string|{}|
+|metrics.extraArgs	|Extra arguments for the binary; possible values [here](https://github.com/oliver006/redis_exporter	|string|{}|
+|metrics.podAnnotations	|Additional annotations for Metrics exporter pod	|string|{}|
+|metrics.podLabels	|Additional labels for Metrics exporter pod	|string|{}|
+|metrics.serviceMonitor.enabled	|If true, creates a Prometheus Operator ServiceMonitor (also requires metrics.enabled to be true)	|string|false|
