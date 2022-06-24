@@ -136,3 +136,25 @@ You can configure the following:
 |metrics.podAnnotations	|Additional annotations for Metrics exporter pod	|string|{}|
 |metrics.podLabels	|Additional labels for Metrics exporter pod	|string|{}|
 |metrics.serviceMonitor.enabled	|If true, creates a Prometheus Operator ServiceMonitor (also requires metrics.enabled to be true)	|string|false|
+|metrics.serviceMonitor.namespace	|Optional namespace which Prometheus is running in	|string|""|
+|metrics.serviceMonitor.interval	|How frequently to scrape metrics (use by default, falling back to Prometheus' default)	|string|""|
+|metrics.serviceMonitor.scrapeTimeout	|Timeout after which the scrape is ended	|string|""|
+|metrics.serviceMonitor.selector	|Prometheus instance selector labels	|string|{}|
+|metrics.serviceMonitor.selector	|Prometheus instance selector labels	|string|{}|
+|metrics.serviceMonitor.labels	|ServiceMonitor extra labels	|string|{}|
+|metrics.serviceMonitor.annotations	|ServiceMonitor annotations	|string|{}|
+|metrics.serviceMonitor.jobLabel	|The name of the label on the target service to use as the job name in prometheus.	|string|""|
+|metrics.prometheusRule.enabled	|Set this to true to create prometheusRules for Prometheus operator	|string|false|
+|metrics.prometheusRule.additionalLabels	|Additional labels that can be used so prometheusRules will be discovered by Prometheus	|string|{}|
+|metrics.prometheusRule.namespace	|namespace where prometheusRules resource should be created	|string|""|
+|metrics.priorityClassName	|Metrics exporter pod priorityClassName	|string|""|
+|metrics.service.type	|Kubernetes Service type (redis metrics)	|string|ClusterIP|
+|metrics.service.loadBalancerIP	|Use serviceLoadBalancerIP to request a specific static IP, otherwise leave blank	|string|""|
+|metrics.service.annotations	|Annotations for the services to monitor.	|string|{}|
+|metrics.service.labels	|Additional labels for the metrics service	|string|{}|
+|metrics.service.clusterIP	|Service Cluster IP	|string|""|
+
+
+### Sysctl Image parameters
+|Parameter|Description|Type|Default|
+|---------|-----------|----|-------|
