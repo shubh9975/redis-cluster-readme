@@ -49,4 +49,11 @@ You can configure the following:
 |tls.dhParamsFilename	|File containing DH params (in order to support DH based ciphers)	|string|""|
 |service.ports.redis	|Kubernetes Redis service port|integer|6379|
 |service.nodePorts.redis	|Node port for Redis	|string|""|
-|
+|service.annotations|Provide any additional annotations which may be required.|string|{}|
+|service.labels|Additional labels for redis service|string|string|{}|
+|service.type| Service type for default redis service	|string|ClusterIP|
+|service.clusterIP	|Service Cluster IP	|string|""|
+|service.loadBalancerIP	|Load balancer IP if service.type is LoadBalancer	|string|""|
+|service.externalTrafficPolicy	|Service external traffic policy	|string|Cluster|
+|service.sessionAffinity	|Session Affinity for Kubernetes service, can be "None" or "ClientIP"	|string|None|
+|service.sessionAffinityConfig	|Additional settings for the sessionAffinity	|string|{}|
