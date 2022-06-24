@@ -73,3 +73,20 @@ You can configure the following:
 |volumePermissions.resources.requests	|The requested resources for the container	|string|{}|
 |podSecurityPolicy.create	|Whether to create a PodSecurityPolicy. WARNING: PodSecurityPolicy is deprecated in Kubernetes v1.21 or later, unavailable in v1.25 or later	|string|false|
 
+
+### Redis® statefulset parameters
+|Parameter|Description|Type|Default|
+|---------|-----------|----|-------|
+|redis|redis-port|redis-port|string|6379|
+|redis.containerPorts.redis	|Redis® port	|integer|6379|
+|redis.containerPorts.bus	|The busPort should be obtained adding 10000 to the redisPort. By default: 10000 + 6379 = 16379	|string|integer|16379|
+|livenessProbe.initialDelaySeconds|Initial delay seconds for livenessProbe	|integer|5|
+|livenessProbe.periodSeconds|Period seconds for livenessProbe	|integer|5|
+|livenessProbe.timeoutSeconds|Timeout seconds for livenessProbe	|integer|5|
+|livenessProbe.failureThreshold|Failure threshold for livenessProbe	|integer|5|
+|livenessProbe.successThreshold|Success threshold for livenessProbe	|integer|1|
+|readinessProbe.initialDelaySeconds|Initial delay seconds for readinessProbe	|integer|5|
+|readinessProbe.periodSeconds|Period seconds for readinessProbe	|integer|5|
+|readinessProbe.timeoutSeconds|Timeout seconds for readinessProbe	|integer|1|
+|readinessProbe.failureThreshold|Failure threshold for readinessProbe	|integer|5|
+|readinessProbe.successThreshold|Success threshold for readinessProbe	|integer|1|
