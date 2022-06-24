@@ -162,3 +162,7 @@ You can configure the following:
 |sysctlImage.registry	|sysctlImage Init container registry	|string|docker.io|
 |sysctlImage.repository	|sysctlImage Init container repository	|string|bitnami/bitnami-shell|
 |sysctlImage.tag	|sysctlImage Init container tag	|string|10-debian-10-r431|
+|sysctlImage.pullPolicy	|sysctlImage Init container pull policy	|string|IfNotPresent|
+|sysctlImage.mountHostSys	|Mount the host /sys folder to /host-sys	|string|false|
+|sysctlImage.resources.limits	|The resources limits for the container	|string|{}|
+|sysctlImage.resources.requests	|The requested resources for the container	|string|{}|
