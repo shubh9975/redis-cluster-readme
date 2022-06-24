@@ -110,3 +110,11 @@ You can configure the following:
 |updateJob.priorityClassName	|Priority class name	|string|""|
 |updateJob.resources.limits	|The resources limits for the container	|string|{}|
 |updateJob.resources.requests	|The requested resources for the container	|string|{}|
+
+### Cluster management parameters
+|Parameter|Description|Type|Default|
+|---------|-----------|----|-------|
+|cluster.init	|Enable the initialization of the Redis® Cluster	|string|true|
+|cluster.nodes	|The number of master nodes should always be >= 3, otherwise cluster creation will fail	|integer|6|
+|cluster.replicas	|Number of replicas for every master in the cluster	|integer|1|
+
