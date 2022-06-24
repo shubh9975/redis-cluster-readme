@@ -90,3 +90,23 @@ You can configure the following:
 |readinessProbe.timeoutSeconds|Timeout seconds for readinessProbe	|integer|1|
 |readinessProbe.failureThreshold|Failure threshold for readinessProbe	|integer|5|
 |readinessProbe.successThreshold|Success threshold for readinessProbe	|integer|1|
+
+
+### Cluster update job parameters
+|Parameter|Description|Type|Default|
+|---------|-----------|----|-------|
+|updateJob.activeDeadlineSeconds	|Number of seconds the Job to create the cluster will be waiting for the Nodes to be ready.	|integer|600|
+|updateJob.annotations	|Job annotations	|string|{}|
+|updateJob.podAnnotations	|Job pod annotations	|string|{}|
+|updateJob.podLabels	|Pod extra labels	|string|{}|
+|updateJob.extraEnvVars	|An array to add extra environment variables	|string|[]|
+|updateJob.extraEnvVarsSecret	|Secret containing extra environment variables	|string|""|
+|updateJob.podAffinityPreset	|Update job pod affinity preset. Ignored if updateJob.affinity is set. Allowed values: soft or hard	|string|""|
+|updateJob.podAntiAffinityPreset	|Update job pod anti-affinity preset. Ignored if updateJob.affinity is set. Allowed values: soft or hard	|string|soft|
+|updateJob.nodeAffinityPreset.type	|Update job node affinity preset type. Ignored if updateJob.affinity is set. Allowed values: soft or hard	|string|""|
+|updateJob.nodeAffinityPreset.key	|Update job node label key to match Ignored if updateJob.affinity is set.	|string|""|
+|updateJob.affinity	|Affinity for update job pods assignment	|string|{}|
+|updateJob.nodeSelector	|Node labels for update job pods assignment	|string|{}|
+|updateJob.priorityClassName	|Priority class name	|string|""|
+|updateJob.resources.limits	|The resources limits for the container	|string|{}|
+|updateJob.resources.requests	|The requested resources for the container	|string|{}|
