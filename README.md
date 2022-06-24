@@ -57,3 +57,12 @@ You can configure the following:
 |service.externalTrafficPolicy	|Service external traffic policy	|string|Cluster|
 |service.sessionAffinity	|Session Affinity for Kubernetes service, can be "None" or "ClientIP"	|string|None|
 |service.sessionAffinityConfig	|Additional settings for the sessionAffinity	|string|{}|
+|persistence.path	|Path to mount the volume at, to use other images Redis® images.	|string|/bitnami/redis/data|
+|persistence.subPath	|The subdirectory of the volume to mount to, useful in dev environments and one PV for multiple services	|string|""|
+|persistence.storageClass	|Storage class of backing PVC	|string|""|
+|persistence.annotations	|Persistent Volume Claim annotations	|string|{}|
+|persistence.accessModes	|Persistent Volume Access Modes	|string|["ReadWriteOnce"]|
+|persistence.size	|Size of data volume	|string|8Gi|
+|persistence.matchLabels	|Persistent Volume selectors	|string|{}|
+|persistence.matchExpressions	|matchExpressions Persistent Volume selectors	|string|{}|
+|
