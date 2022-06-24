@@ -22,3 +22,8 @@ You can configure the following:
 |serviceAccount.name|	The name of the ServiceAccount to create|string|""|
 |serviceAccount.annotations|Annotations for Cassandra Service Account|string|{}|
 |serviceAccount.automountServiceAccountToken|Automount API credentials for a service account.|string|false|
+|rbac.create|Specifies whether RBAC resources should be created|string|false|
+|podSecurityContext.enabled|Enable Redis® pod Security Context|string|true|
+|podSecurityContext.fsGroup|Group ID for the pods|integer|1001|
+|podSecurityContext.runAsUser|User ID for the pods|integer|1001|
+|podSecurityContext.runAsNonRoot|"podSecurityContext runAsNonRoot"|string|true|
