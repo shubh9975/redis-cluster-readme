@@ -27,3 +27,9 @@ You can configure the following:
 |podSecurityContext.fsGroup|Group ID for the pods|integer|1001|
 |podSecurityContext.runAsUser|User ID for the pods|integer|1001|
 |podSecurityContext.runAsNonRoot|"podSecurityContext runAsNonRoot"|string|true|
+|podDisruptionBudget|Limits the number of pods of the replicated application that are down simultaneously from voluntary disruptions|string|{}|
+|minAvailable|Min number of pods that must still be available after the eviction|string|""|
+|maxUnavailable|Max number of pods that can be unavailable after the eviction	|string|""|
+|containerSecurityContext.enabled|Enable Containers' Security Context	|string|true|
+|containerSecurityContext.runAsUser	|User ID for the containers.|integer|1001|
+|containerSecurityContext.runAsNonRoot|Run container as non root|string|true|
