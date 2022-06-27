@@ -85,6 +85,18 @@ You can configure the following:
 |redispassword| passworf for redis |string|"bm9TMWlSaHlzbA=="|
 |StatefulSetpartition|StatefulSetpartition|integer|0|
 |prometheusioport| port for prometheus| integer|"9121"|
+|prometheusioscrape| prometheusioscrape parameter| string|true|
+|checksumscript|checksumscript|string|badfb395e84c95a4ec1e550abefc72efcfa97567b84b48d73a24270eef9854d4|
+|checksumsecret|checksumsecret|string|0c5a91217c42880d6318ee8057158c5a0cdb6bfea35effa1a4f640f1ea83037d|
+|checksumconfig|checksumconfig|string|ea1a46f51ea4368a4ead925982f31617cbdc5efa089409b2cdf04b9e298e7f1f|
+|enableServiceLinks |enableServiceLinks paratmeter|string|false|
+|statefulset_rollingUpdate_type| statefulset rollingUpdate type|string|RollingUpdate|
+|preferredDuringSchedulingIgnoredDuringExecution_weight|preferredDuringSchedulingIgnored During Execution weight|integer|1|
+|configMap_defaultMode|configMap default Mode|integer|0755|
+|securityContext_runAsUser|securityContext runAsUser|integer|0|
+|securityContext_privileged|securityContext privileged|string|true|
+|initContainers_resources_limits|initContainers resources limits|string|{}|
+|initContainers_resources_requests|initContainers resources requests|string|{}|
 
 
 
