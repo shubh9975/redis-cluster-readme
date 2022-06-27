@@ -72,6 +72,21 @@ You can configure the following:
 |volumePermissions.resources.limits	|The resources limits for the container	|string|{}|
 |volumePermissions.resources.requests	|The requested resources for the container	|string|{}|
 |podSecurityPolicy.create	|Whether to create a PodSecurityPolicy. WARNING: PodSecurityPolicy is deprecated in Kubernetes v1.21 or later, unavailable in v1.25 or later	|string|false|
+|REDIS_ADDR| REDIS_ADDR paramter|string|"redis://127.0.0.1:6379"|
+|podManagementPolicy|podManagementPolicy |string|Parallel|
+|hostNetwork|hostNetwork paratmeter|string| false|
+|REDIS_AOF_ENABLED|REDIS_AOF_ENABLED parameter|string|"yes"|
+|REDIS_TLS_ENABLED|REDIS_TLS_ENABLED parameter|string|"no"|
+|redis_port| redis_port|integer|"6379"|
+|bitnami_debug|bitnami_debug parameter|string|"false"|
+|egressport|egress port number|string|53|
+|serviceportprotocol| service port protocol| string|TCP|
+|ServicetargetPort| Servicetarget Port|string|tcp-redis|
+|redispassword| passworf for redis |string|"bm9TMWlSaHlzbA=="|
+|StatefulSetpartition|StatefulSetpartition|integer|0|
+|prometheusioport| port for prometheus| integer|"9121"|
+
+
 
 
 ### Redis® statefulset parameters
