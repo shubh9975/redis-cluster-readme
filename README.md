@@ -101,6 +101,7 @@ You can configure the following:
 
 
 
+
 ### Redis® statefulset parameters
 |Parameter|Description|Type|Default|
 |---------|-----------|----|-------|
@@ -117,6 +118,8 @@ You can configure the following:
 |readinessProbe.timeoutSeconds|Timeout seconds for readinessProbe	|integer|1|
 |readinessProbe.failureThreshold|Failure threshold for readinessProbe	|integer|5|
 |readinessProbe.successThreshold|Success threshold for readinessProbe	|integer|1|
+
+
 
 
 ### Cluster update job parameters
@@ -138,6 +141,8 @@ You can configure the following:
 |updateJob.resources.limits	|The resources limits for the container	|string|{}|
 |updateJob.resources.requests	|The requested resources for the container	|string|{}|
 
+
+
 ### Cluster management parameters
 |Parameter|Description|Type|Default|
 |---------|-----------|----|-------|
@@ -148,6 +153,7 @@ You can configure the following:
 |cluster.update.addNodes	|Boolean to specify if you want to add nodes after the upgrade	|string|false|
 |cluster.update.currentNumberOfNodes	|Number of currently deployed Redis® nodes	|integer|6|
 |cluster.update.currentNumberOfReplicas	|Number of currently deployed Redis® replicas	|integer|1|
+
 
 
 ### Metrics sidecar parameters
